@@ -1,0 +1,74 @@
+/*********************************************
+** General styling
+** Importing reset, fonts and utilities...
+** using @use to import a mixin for some reason fails
+*********************************************/
+@use "includes/fonts";
+@use "includes/reset";
+@use "includes/animations";
+@use "includes/overrides";
+@import "includes/fancyScrollbar";
+
+html {
+  height: 100%;
+}
+body {
+  --teal-main: hsl(180, 75%, 25%);
+  --teal-secondary: hsl(180, 57%, 50%);
+  --red: hsl(2, 80%, 55%);
+  &.dark {
+    --background-main: hsl(180, 5%, 10%);
+    --background-secondary: hsl(180, 5%, 8%);
+    --background-semi: hsla(180, 5%, 10%, 0.96);
+    --background-semi-secondary: hsla(180, 5%, 10%, 0.5);
+    --borders-main: hsl(180, 5%, 6%);
+    --text-main: #fff;
+    --text-secondary: #bbb;
+    --text-semi: #bbb;
+    &::selection {
+      background-color: hsla(180, 45%, 35%, 0.6);
+    }
+  }
+  &.light {
+    --background-main: #fafafa;
+    --background-secondary: #ddd;
+    --background-semi: rgba(221, 221, 221, 0.8);
+    --background-semi-secondary: rgba(221, 221, 221, 0.8);
+    --borders-main: #ccc;
+    --text-main: #222;
+    --text-secondary: #888;
+    --text-semi: #444;
+    &::selection {
+      background-color: hsla(180, 12%, 44%, 0.6);
+    }
+  }
+  height: 100%;
+  position: relative;
+  background-color: var(--background-main);
+}
+
+.root {
+  @include fancyScrollbar;
+  color: var(--text-main);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+  section {
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    padding: 3rem 2rem;
+    z-index: 2;
+  }
+  * {
+    transition: color 150m ease-in-out, backgorund-color 150m ease-in-out;
+  }
+}

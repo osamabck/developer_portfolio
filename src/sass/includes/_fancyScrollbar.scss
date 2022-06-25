@@ -1,0 +1,39 @@
+/*********************************************
+** Just a fancy scrollbar, with a fallback for Firefox
+*********************************************/
+@mixin fancyScrollbar {
+  @supports (scrollbar-width: thin) {
+    scrollbar-width: thin;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--teal-main);
+    border: none;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--teal-secondary);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: var(--teal-main);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--background-main);
+    border: none;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background: var(--background-main);
+  }
+  &::-webkit-scrollbar-track:active {
+    background: var(--background-main);
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

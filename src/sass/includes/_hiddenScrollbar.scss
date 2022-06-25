@@ -1,0 +1,22 @@
+/*********************************************
+** Hiding the scrollbar while keeping the scroll
+*********************************************/
+@mixin hiddenScrollbar {
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 0px none #fefeff;
+  }
+  &::-webkit-scrollbar-track {
+    border: 0px none #191a1a;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

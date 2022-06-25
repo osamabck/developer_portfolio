@@ -1,0 +1,31 @@
+{
+  "name": "developer_portfolio",
+  "version": "1.2.0",
+  "description": "A developer portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Oussama Bouchebak",
+  "license": "MIT",
+  "dependencies": {
+    "i18next": "^21.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.15.1",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-react": "^7.27.1",
+    "sass": "^1.35.2",
+    "vite": "^2.9.5",
+    "vite-plugin-chunk-split": "^0.2.2",
+    "vite-plugin-imagemin": "^0.6.1"
+  }
+}
